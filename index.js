@@ -24,8 +24,6 @@ function getPlayerChoice() {
     }
 }
 
-// function to play a round with computer and player choice
-
 function round(player, computer) {
     if (player === "rock") {
         if (computer === "rock") {
@@ -75,7 +73,30 @@ function round(player, computer) {
     }
 }
 
+function rounds() {
+    let input = prompt("How many points to win?")
+    return parseInt(input)
+}
 
-// game function that asks how many rounds to play
-
-// console.log winner
+function game() {
+    let pointsToWin = rounds()
+    let playerScore = 0;
+    let computerScore = 0;
+    let result;
+    while (playerScore < pointsToWin && computerScore < pointsToWin) {
+        result = round(getPlayerChoice(), getComputerChoice());
+        if (result === "player") {
+            playerScore++;
+        } else if (result === "computer") {
+            computerScore++;
+        }
+        console.log(`player has ${playerScore} points, computer has ${computerScore} points. First to ${pointsToWin} wins`)
+    }
+    if (playerScore < computerScore) {
+        console.log("player wins !")
+    }
+    else {
+        console.log("computer wins!")
+    }
+}
+game()

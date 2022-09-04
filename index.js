@@ -92,7 +92,7 @@ function game() {
         }
         console.log(`player has ${playerScore} points, computer has ${computerScore} points. First to ${pointsToWin} wins`)
     }
-    if (playerScore < computerScore) {
+    if (playerScore > computerScore) {
         console.log("player wins !")
     }
     else {

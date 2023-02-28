@@ -1,0 +1,19 @@
+.container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.score {
+    font-size: 20vh;
+    color: red;
+}
+
+.choice {
+    font-size: 15vh;
+    color: blue;
+}
+
+#winnerMessage {
+    text-align: center;
+    font-size: 10vh;
+}

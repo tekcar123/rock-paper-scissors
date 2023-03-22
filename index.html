@@ -14,10 +14,12 @@
         <div class="score" id="computer">0</div>
     </div>
     <div class="container">
-        <div class="choice">rock</div>
-        <div class="choice">paper</div>
-        <div class="choice">scissors</div>
+        <div class="choice" onclick="playersPicked[0] = 'rock';  console.log('player picked %crock', `color: #00ff00; font-size: 25px`); computerPick()">rock</div>
+        <div class="choice" onclick="playersPicked[0] = 'paper'; console.log('player picked %cpaper', `color: #00ff00; font-size: 25px`); computerPick()">paper</div>
+        <div class="choice" onclick="playersPicked[0] = 'scissors'; console.log('player picked %cscissors', `color: #00ff00; font-size: 25px`); computerPick()">scissors</div>
     </div>
+    <br>
+    <button id="playself" onclick="computerPlaySelf()">Let computer play itself</button>
 </body>
 <script src="index.js"></script>
 </html>
